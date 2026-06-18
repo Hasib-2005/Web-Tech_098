@@ -1,0 +1,629 @@
+/* ===========================
+   RESUME/CV PAGE STYLES
+   =========================== */
+
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    --text-color: #333;
+    --light-text: #666;
+    --bg-color: #f8f9fa;
+    --white: #ffffff;
+    --border-color: #e0e0e0;
+    --border-radius: 8px;
+    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===========================
+   NAVIGATION
+   =========================== */
+
+.navbar {
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--primary-color);
+}
+
+.nav-menu a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+/* ===========================
+   RESUME CONTAINER
+   =========================== */
+
+.resume-container {
+    background: var(--white);
+    margin: 2rem auto;
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+   RESUME HEADER
+   =========================== */
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.job-title {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.contact-details span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--light-text);
+}
+
+.contact-details i {
+    color: var(--primary-color);
+    width: 20px;
+}
+
+.contact-details a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.download-btn {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-print {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-print:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* ===========================
+   RESUME CONTENT
+   =========================== */
+
+.resume-content {
+    padding-bottom: 2rem;
+}
+
+.resume-section {
+    margin-bottom: 2.5rem;
+    page-break-inside: avoid;
+}
+
+.section-heading {
+    font-size: 1.3rem;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.section-heading i {
+    font-size: 1.2rem;
+}
+
+.resume-section > p {
+    color: var(--light-text);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* ===========================
+   SKILLS SECTION
+   =========================== */
+
+.skills-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.skill-group h4 {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-group p {
+    color: var(--light-text);
+    font-size: 0.95rem;
+}
+
+/* ===========================
+   EXPERIENCE SECTION
+   =========================== */
+
+.experience-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.exp-header h3 {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.date {
+    background: var(--bg-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.company {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.exp-details {
+    list-style-position: inside;
+    color: var(--light-text);
+    font-size: 0.95rem;
+}
+
+.exp-details li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* ===========================
+   EDUCATION SECTION
+   =========================== */
+
+.edu-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.edu-item:last-child {
+    border-bottom: none;
+}
+
+.edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.edu-header h3 {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.university {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+
+.gpa {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.details {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* ===========================
+   CERTIFICATIONS
+   =========================== */
+
+.cert-item {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cert-item:last-child {
+    border-bottom: none;
+}
+
+.cert-item h4 {
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+}
+
+.cert-item p {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ===========================
+   PROJECTS SECTION
+   =========================== */
+
+.project-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-item:last-child {
+    border-bottom: none;
+}
+
+.project-item h3 {
+    color: var(--text-color);
+    font-size: 1.05rem;
+    margin-bottom: 0.3rem;
+}
+
+.project-item p:first-of-type {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.project-item p:last-child {
+    color: var(--light-text);
+    font-size: 0.95rem;
+}
+
+/* ===========================
+   LANGUAGES
+   =========================== */
+
+.languages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.lang-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+}
+
+.lang-item span:first-child {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.proficiency {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ===========================
+   SOFT SKILLS
+   =========================== */
+
+.soft-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ===========================
+   ACHIEVEMENTS
+   =========================== */
+
+.achievements {
+    list-style-position: inside;
+    color: var(--light-text);
+}
+
+.achievements li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+/* ===========================
+   RESUME FOOTER
+   =========================== */
+
+.resume-footer {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border-color);
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.resume-footer p {
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   PRINT STYLES
+   =========================== */
+
+@media print {
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    body {
+        background: var(--white);
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .resume-container {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .download-btn {
+        display: none;
+    }
+
+    .section-heading {
+        page-break-inside: avoid;
+    }
+
+    .experience-item,
+    .edu-item,
+    .project-item {
+        page-break-inside: avoid;
+    }
+
+    a {
+        text-decoration: underline;
+        color: var(--text-color);
+    }
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 768px) {
+    .resume-container {
+        padding: 1.5rem;
+        margin: 1rem auto;
+    }
+
+    .resume-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .download-btn {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .btn-print {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .section-heading {
+        font-size: 1.1rem;
+    }
+
+    .exp-header,
+    .edu-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+    .languages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-menu {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-container {
+        padding: 1rem;
+    }
+
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .job-title {
+        font-size: 1rem;
+    }
+
+    .contact-details {
+        font-size: 0.85rem;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .languages {
+        grid-template-columns: 1fr;
+    }
+
+    .soft-skills {
+        gap: 0.5rem;
+    }
+
+    .skill-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .section-heading {
+        font-size: 1rem;
+    }
+}
