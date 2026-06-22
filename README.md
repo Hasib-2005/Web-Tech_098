@@ -5,3 +5,4 @@ global
 local files
 
 checking abcde
+abcde
