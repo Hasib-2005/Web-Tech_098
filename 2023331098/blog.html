@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasib - Blog</title>
+    <link rel="stylesheet" href="blog-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">Hasib</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Portfolio</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>My Blog</h1>
+            <p>Tips, tutorials, and insights on web development and technology</p>
+        </div>
+    </section>
+
+    <!-- Search & Filter -->
+    <section class="blog-filter">
+        <div class="container">
+            <input type="text" id="searchInput" class="search-box" placeholder="Search articles...">
+            <div class="filter-tags">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web-development">Web Development</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                <button class="filter-btn" data-filter="css">CSS</button>
+                <button class="filter-btn" data-filter="tutorials">Tutorials</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="posts-grid">
+                <!-- Blog Post 1 -->
+                <article class="blog-card" data-category="web-development">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250?text=Web+Development" alt="Web Development">
+                        <span class="post-category">Web Development</span>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Getting Started with React: A Beginner's Guide</h2>
+                        <p class="post-excerpt">Learn the basics of React and start building interactive user interfaces. In this comprehensive guide, we'll cover components, props, and state management.</p>
+                        <div class="post-meta">
+                            <span class="author"><i class="fas fa-user"></i> Hasib</span>
+                            <span class="date"><i class="fas fa-calendar"></i> June 15, 2024</span>
+                            <span class="read-time"><i class="fas fa-clock"></i> 8 min read</span>
+                        </div>
+                        <div class="post-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Frontend</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card" data-category="css">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250?text=CSS+Tips" alt="CSS Tips">
+                        <span class="post-category">CSS</span>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">10 CSS Tips and Tricks You Should Know</h2>
+                        <p class="post-excerpt">Master CSS with these essential tips and tricks that will improve your styling workflow and make you a more efficient developer.</p>
+                        <div class="post-meta">
+                            <span class="author"><i class="fas fa-user"></i> Hasib</span>
+                            <span class="date"><i class="fas fa-calendar"></i> June 10, 2024</span>
+                            <span class="read-time"><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <div class="post-tags">
+                            <span class="tag">CSS</span>
+                            <span class="tag">Styling</span>
+                            <span class="tag">Design</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card" data-category="javascript">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250?text=JavaScript" alt="JavaScript">
+                        <span class="post-category">JavaScript</span>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Understanding Asynchronous JavaScript: Promises and Async/Await</h2>
+                        <p class="post-excerpt">Dive deep into asynchronous programming in JavaScript. Learn about callbacks, promises, and async/await syntax with practical examples.</p>
+                        <div class="post-meta">
+                            <span class="author"><i class="fas fa-user"></i> Hasib</span>
+                            <span class="date"><i class="fas fa-calendar"></i> June 5, 2024</span>
+                            <span class="read-time"><i class="fas fa-clock"></i> 10 min read</span>
+                        </div>
+                        <div class="post-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Async</span>
+                            <span class="tag">Programming</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card" data-category="tutorials">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250?text=Web+Performance" alt="Web Performance">
+                        <span class="post-category">Tutorials</span>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Web Performance Optimization: Speed Up Your Website</h2>
+                        <p class="post-excerpt">Learn essential techniques to optimize your website's performance and provide a better user experience to your visitors.</p>
+                        <div class="post-meta">
+                            <span class="author"><i class="fas fa-user"></i> Hasib</span>
+                            <span class="date"><i class="fas fa-calendar"></i> May 30, 2024</span>
+                            <span class="read-time"><i class="fas fa-clock"></i> 7 min read</span>
+                        </div>
+                        <div class="post-tags">
+                            <span class="tag">Performance</span>
+                            <span class="tag">Optimization</span>
+                            <span class="tag">SEO</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card" data-category="web-development">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250?text=Responsive+Design" alt="Responsive Design">
+                        <span class="post-category">Web Development</span>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Building Responsive Websites: Mobile First Approach</h2>
+                        <p class="post-excerpt">Master responsive web design using the mobile-first approach. Create websites that look great on all devices.</p>
+                        <div class="post-meta">
+                            <span class="author"><i class="fas fa-user"></i> Hasib</span>
+                            <span class="date"><i class="fas fa-calendar"></i> May 25, 2024</span>
+                            <span class="read-time"><i class="fas fa-clock"></i> 9 min read</span>
+                        </div>
+                        <div class="post-tags">
+                            <span class="tag">Responsive</span>
+                            <span class="tag">Mobile</span>
+                            <span class="tag">Design</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card" data-category="javascript">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250?text=ES6+Features" alt="ES6 Features">
+                        <span class="post-category">JavaScript</span>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">Modern JavaScript: ES6+ Features Every Developer Should Know</h2>
+                        <p class="post-excerpt">Explore modern JavaScript features introduced in ES6 and beyond. Arrow functions, destructuring, classes, and more.</p>
+                        <div class="post-meta">
+                            <span class="author"><i class="fas fa-user"></i> Hasib</span>
+                            <span class="date"><i class="fas fa-calendar"></i> May 20, 2024</span>
+                            <span class="read-time"><i class="fas fa-clock"></i> 11 min read</span>
+                        </div>
+                        <div class="post-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">ES6</span>
+                            <span class="tag">Modern</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <p>No articles found. Try a different search or filter.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe to My Newsletter</h2>
+            <p>Get the latest articles and tutorials delivered to your inbox</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Hasib. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Portfolio</a> | 
+                <a href="blog.html">Blog</a> | 
+                <a href="resume.html">Resume</a> | 
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="blog-script.js"></script>
+</body>
+</html>
